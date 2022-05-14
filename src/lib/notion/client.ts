@@ -319,9 +319,14 @@ export async function getPostsByTagBefore(
 export async function getFirstPostByTag(tag: string) {
   if (blogIndexCache.exists()) {
     const allPosts = await getAllPosts()
-    return allPosts.filter(post => post.Tags.includes(tag))[allPosts.length - 1]
+    console.log(tag)
+    console.log(allPosts)
+    console.log(allPosts.filter(post => post.Tags.includes(tag)))
+    console.log(allPosts.filter(post => post.Tags.includes(tag)).slice(-1)[0])
+    return allPosts.filter(post => post.Tags.includes(tag)).slice(-1)[0]
   }
 
+  console.log(tag)
   const params = {
     database_id: DATABASE_ID,
     filter: _buildFilter([
@@ -351,6 +356,7 @@ export async function getFirstPostByTag(tag: string) {
   if (!_validPost(data.results[0])) {
     return null
   }
+  console.log(data.results)
 
   return _buildPost(data.results[0])
 }

@@ -44,6 +44,7 @@ export async function getStaticProps({ params: { tag } }) {
     getPosts(5),
     getAllTags(),
   ])
+  console.log(firstPost)
 
   return {
     props: {
