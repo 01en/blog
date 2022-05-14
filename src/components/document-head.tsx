@@ -12,6 +12,7 @@ const DocumentHead = ({ title = '', description = '', urlOgImage = '' }) => {
   return (
     <Head>
       <title>{title ? `${title} - ${SITE_TITLE}` : SITE_TITLE}</title>
+      <link rel="icon" href="/favicon.ico" />
       <meta
         name="description"
         content={description ? description : SITE_DESCRIPTION}
