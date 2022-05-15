@@ -8,14 +8,13 @@ const RenderPage = () => (
 
     <div>
       <h2>Welcome!</h2>
-      <p>Your easy-notion-blog deployed successfully!</p>
-      <p>Have fun!</p>
-      <p>
-        easy-notion-blog powered by{' '}
-        <ExtLink href="https://github.com/otoyo/easy-notion-blog">
-          otoyo/easy-notion-blog
-        </ExtLink>
-      </p>
+      <p>1coinが日々あったことを雑に記録していくブログです。</p>
+      <p>エンジニアリングを中心に日常生活や趣味についても書いていきます。</p>
+      <ul>
+        <li>
+          <ExtLink href="https://twitter.com/01en__">Twitter</ExtLink>
+        </li>
+      </ul>
     </div>
   </div>
 )
